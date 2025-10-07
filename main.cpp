@@ -1,5 +1,3 @@
-
-// #include <Eigen/Dense>
 #include <fstream>
 #include <iostream>
 #include <optional>
@@ -7,9 +5,8 @@
 
 #include "GeometryObjects/segment3d.h"
 #include "GeometryObjects/vector3d.h"
-// #include "InputOutput.h"
 
-/// @brief Finding intersection of two segments. There are available cases :
+/// @brief Finding intersection of two segments
 /// @param segment1 the first segment
 /// @param segment2 the second segment
 /// @return empty set or point or segmemt
@@ -53,7 +50,7 @@ int main()
     /// Tests
     std::vector<TestCase> tests1 = {
         {Segment3D(Vector3D(0, 0, 0), Vector3D(2, 0, 0)),
-         Segment3D(Vector3D(1, 0, 0), Vector3D(4, 2, 10)), "Coplanar, intersection at a point"},
+         Segment3D(Vector3D(1, 0, 0), Vector3D(4, 2, 10)), "Coplanar, intersection at a point: "},
         {Segment3D(Vector3D(0, 0, 0), Vector3D(4, 0, 0)),
          Segment3D(Vector3D(2, 0, 0), Vector3D(6, 0, 0)), "Collinear, overlapping: "},
         {Segment3D(Vector3D(0, 0, 0), Vector3D(4, 0, 0)),
@@ -65,7 +62,7 @@ int main()
         {Segment3D(Vector3D(0, 0, 0), Vector3D(1, 0, 0)),
          Segment3D(Vector3D(0, 1, 1), Vector3D(0, 2, 2)), "Not coplanar: "},
         {Segment3D(Vector3D(0, 0, 0), Vector3D(1, 0, 0)),
-         Segment3D(Vector3D(0, 1, 0), Vector3D(1, 1, 0)), "Parallel, not collinear: "}};
+         Segment3D(Vector3D(0, 1, 0), Vector3D(1, 1, 0)), "Parallel: "}};
 
     RunTests(tests1, fout);
 
