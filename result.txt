@@ -1,0 +1,32 @@
+Coplanar, intersection at a point: Intersection of [(0, 0, 0),(2, 0, 0)]
+and [(1, 0, 0),(4, 2, 10)]
+	Point: (1, 0, 0)
+
+Collinear, overlapping: : Intersection of [(0, 0, 0),(4, 0, 0)]
+and [(2, 0, 0),(6, 0, 0)]
+	Segment: [(2, 0, 0),(4, 0, 0)]
+
+Collinear, full overlapping: : Intersection of [(0, 0, 0),(4, 0, 0)]
+and [(1, 0, 0),(3, 0, 0)]
+	Segment: [(1, 0, 0),(3, 0, 0)]
+
+Collinear, intersecting at the ends: : Intersection of [(0, 0, 0),(2, 0, 0)]
+and [(2, 0, 0),(4, 0, 0)]
+	Point: (2, 0, 0)
+
+Collinear, do not intersect: : Intersection of [(0, 0, 0),(1, 0, 0)]
+and [(2, 0, 0),(3, 0, 0)]
+	Does not intersection
+
+Not coplanar: : Intersection of [(0, 0, 0),(1, 0, 0)]
+and [(0, 1, 1),(0, 2, 2)]
+	Does not intersection
+
+Parallel, not collinear: : Intersection of [(0, 0, 0),(1, 0, 0)]
+and [(0, 1, 0),(1, 1, 0)]
+	Does not intersection
+
+File input: Intersection of [(0, 0, 0),(1, 1, 1)]
+and [(1, 1, 1),(2, 0, 0)]
+	Point: (1, 1, 1)
+
