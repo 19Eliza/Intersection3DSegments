@@ -54,14 +54,20 @@
         "numbers": "cpp",
         "streambuf": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "bitset": "cpp",
+        "optional": "cpp",
+        "regex": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp",
+        "ratio": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     },
-    // Автоформатирование при сохранении
     "editor.formatOnSave": true,
-    // Использовать clang-format
-    "C_Cpp.clang_format_style": "file", // брать стиль из .clang-format
-    "C_Cpp.clang_format_fallbackStyle": "Google", // если .clang-format не найден
-    // Для C++ файлов — форматтер от Microsoft C/C++ Extension
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },

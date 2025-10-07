@@ -9,12 +9,10 @@ Vector3D::Vector3D(const Vector3D& new_vector3d)
     Z = new_vector3d.Z;
 }
 
-// Геттеры
 double Vector3D::GetX() const noexcept { return X; }
 double Vector3D::GetY() const noexcept { return Y; }
 double Vector3D::GetZ() const noexcept { return Z; }
 
-// Сеттеры
 void Vector3D::SetX(double newX) noexcept { X = newX; }
 void Vector3D::SetY(double newY) noexcept { Y = newY; }
 void Vector3D::SetZ(double newZ) noexcept { Z = newZ; }
@@ -29,7 +27,6 @@ Vector3D Vector3D::operator-(const Vector3D& other) const noexcept
     return {X - other.X, Y - other.Y, Z - other.Z};
 }
 
-// Умножение/деление на скаляр
 Vector3D Vector3D::operator*(double scalar) const noexcept
 {
     return {X * scalar, Y * scalar, Z * scalar};
@@ -45,22 +42,18 @@ Vector3D Vector3D::operator/(double scalar) const
     return {X / scalar, Y / scalar, Z / scalar};
 }
 
-// Скалярное произведение
 double Vector3D::Dot(const Vector3D& other) const noexcept
 {
     return X * other.X + Y * other.Y + Z * other.Z;
 }
 
-// Векторное произведение (в 3D → вектор)
 Vector3D Vector3D::Cross(const Vector3D& other) const noexcept
 {
     return {Y * other.Z - Z * other.Y, Z * other.X - X * other.Z, X * other.Y - Y * other.X};
 }
 
-// Длина вектора
 double Vector3D::LengthVector() const noexcept { return std::sqrt(X * X + Y * Y + Z * Z); }
 
-// Нормализация (единичный вектор)
 Vector3D Vector3D::NormalizedVector() const
 {
     double len = this->LengthVector();
@@ -71,7 +64,6 @@ Vector3D Vector3D::NormalizedVector() const
     return {X / len, Y / len, Z / len};
 }
 
-// Расстояние между точками
 double Vector3D::DistanceToPoint(const Vector3D& p) const noexcept
 {
     double dx = X - p.X;
@@ -80,7 +72,6 @@ double Vector3D::DistanceToPoint(const Vector3D& p) const noexcept
     return std::sqrt(dx * dx + dy * dy + dz * dz);
 }
 
-// Ввод/вывод
 std::ostream& operator<<(std::ostream& os, const Vector3D& p)
 {
     return os << "(" << p.X << ", " << p.Y << ", " << p.Z << ")";
