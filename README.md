@@ -1,7 +1,7 @@
 # Intersection3DSegments
 Finding the intersection of two Segment3D.
 
-This problem can have several geometric cases depending on the spatial arrangement of the segments.
+This task have several cases.
 
 1. Non coplanar segments 
    - Define segment vectors:
@@ -15,15 +15,15 @@ This problem can have several geometric cases depending on the spatial arrangeme
 2. Coplanar segments
    - Segments lie in the same plane (w0 · (u × v) = 0).
    - To find intersection, solve the linear system (Cramer's method).
-   - If the solution satisfies 0 ≤ s ≤ 1 and 0 ≤ t ≤ 1 (parameters along the segments), the segments intersect.
-   - Possible outcomes:
-       * Intersection at a point
-       * Intersection is a segment
-       * No intersection
+   - If the solution 0 ≤ s ≤ 1 and 0 ≤ t ≤ 1 , the segments intersect.
+   - Possible cases:
+       - Intersection at a point
+       - Intersection is a segment
+       - No intersection
 
 3. Collinear segments
    - Cross product u × v = 0.
-   - If additionally the start points are collinear, check for overlap:
-       * Fully overlapping
-       * Partial overlap 
-       * No overlap
+   - If additionally the start points are collinear, check for overlap: 
+       - Fully overlapping
+       - Partial overlap 
+       - No overlap
